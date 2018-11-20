@@ -74,7 +74,7 @@ button, select, a {
 }
 
 #regions {
-	stroke-width: 0;
+	stroke-width: 2;
 	stroke: none;
 	fill-rule: evenodd;
 	stroke-linejoin: round;
@@ -99,16 +99,6 @@ button, select, a {
   cursor: pointer;
 }
 
-#hills {
-	stroke-width: 0.1px;
-	fill: #999999;
-}
-
-#mounts {
-	stroke-width: 0.1px;
-	fill: white;
-}
-
 .strokes {
 	stroke-width: 0.08px;
 	width: 2px;
@@ -131,17 +121,6 @@ button, select, a {
 	mask-mode: alpha;
 }
 
-#swamps {
-	stroke-width: 0.05px;
-	fill: none;
-	stroke: #5c5c70;
-}
-
-#forests {
-	stroke-width: 0.1px;
-	stroke: #5c5c70;
-}
-
 #options .pressed {
 	background-color: #916e7f;
 	font-style: italic;
@@ -153,7 +132,7 @@ button, select, a {
 	font-size: 9px;
 }
 
-#labelEditor div {
+#labelEditor div, #markerEditor div  {
 	display: inline-block;
 }
 
@@ -198,7 +177,7 @@ button, select, a {
 
 div > input[type="color"].editColor {
 	height: 18px;
-	width: 46px;
+	width: 20px;
 	padding: 0;
 	cursor: pointer;
 }
@@ -231,10 +210,9 @@ div > input[type="number"].editNumber {
 	width: 34px;
 }
 
-#riverEditor>*,
-#routeEditor>*,
-#iconEditor>*,
-#reliefEditor>*,
+#riverEditor > *,
+#routeEditor > *,
+#iconEditor > *,
 #burgEditor * {
 	display: inline-block;
 }
@@ -291,6 +269,7 @@ text.drag {
 }
 
 .ui-dialog, #optionsContainer {
+	-moz-user-select: none;
 	user-select: none;
 }
 
@@ -522,7 +501,7 @@ p {
 }
 
 #cellInfo>div:nth-child(2) {
-	width: 35%;
+	width: 45%;
 }
 
 #customizeOptions {
@@ -531,15 +510,17 @@ p {
 
 #tooltip {
 	position: fixed;
-	display: none;
-	text-align: center;
-	top: calc(98vh - (10px + 0.5vw));
-	width: 100%;
-	cursor: default;
-	text-shadow: 1px 1px 2px #1d0e0f;
-	color: #ffffff;
-	font-size: calc(10px + 0.5vw);
-	pointer-events: none;
+  display: none;
+  text-align: center;
+  bottom: 0.5vw;
+  width: 70%;
+  left: 15%;
+  cursor: default;
+  text-shadow: 1px 1px 2px #1d0e0f;
+  color: #ffffff;
+  font-size: calc(10px + 0.5vw);
+  pointer-events: none;
+	white-space: pre-line;
 }
 
 #optionsContent table td:nth-of-type(1) {
@@ -809,7 +790,12 @@ body button.noicon {
 .ui-dialog input[type="number"] {
 	width: 28px;
 	height: 12px;
-	cursor: pointer;
+}
+
+.ui-dialog input[type="number"].relief {
+	width: 38px;
+  height: 10px;
+  margin-top: 1px;
 }
 
 .ui-dialog .disabled {
@@ -1182,6 +1168,7 @@ div.states button.selectCapital {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	cursor: default;
+	-moz-user-select: none;
 	user-select: none;
 }
 
@@ -1322,26 +1309,27 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
-#namesbaseEditor select,
-#namesbaseEditor textarea {
+div.textual select,
+div.textual textarea {
   font-size: 10px;
+	max-width: 366px;
   font-family: Copperplate, monospace;
   outline: none;
 }
 
-#namesbaseEditor input {
+div.textual input {
   font-size: 10px;
   font-family: Copperplate, monospace;
   outline: none;
   height: 12px;
 }
 
-#namesbaseEditor fieldset {
+div.textual fieldset {
   margin: 3px 3px 5px 0;
   border-style: dashed;
 }
 
-#namesbaseEditor span, #namesbaseEditor legend {
+div.textual span, .textual legend {
   font-size: 9px;
   font-weight: bold;
 }
@@ -1361,4 +1349,78 @@ input[type="checkbox"] {
 
 #namesbaseDouble {
   width: 40px;
+}
+
+#markers {
+	cursor: pointer;
+  font-family: monospace;
+	-moz-user-select: none;
+	user-select: none;
+	text-anchor: middle;
+}
+
+#markerEditor > button {
+	vertical-align: top;
+}
+
+#markerIconTable {
+  font-size: 12px;
+  cursor: pointer;
+}
+
+#markerIconTable td:active {
+  transform: translate(0px, 1px);
+}
+
+#markerIconTable td.selected {
+  outline: 1px solid #9b9b9b;
+}
+
+.highlighted {
+	outline-width: 2px;
+	outline-style: dashed;
+	outline-color: #0da6ff;
+	outline-offset: 100px;
+	fill: none;
+}
+
+div#legend {
+	display: none;
+	position: fixed;
+	width: 25vw;
+  right: 1vw;
+  top: 1vw;
+  font-size: 0.9em;
+	border: 1px solid #5e4fa2;
+	background: #cdb99040;
+	box-shadow: 2px 2px 5px -3px #3a2804;
+	white-space: pre-line;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+div#legendHeader {
+  font-weight: bold;
+  padding: 0 0 4px 14px;
+  border-bottom: 1px solid #5e4fa2;
+}
+
+div#legendBody {
+  padding: 0 10px;
+}
+
+
+svg.button {
+  position: relative;
+  background-color: transparent;
+  margin: -5px;
+  padding: 0;
+}
+
+#reliefIconsSeletionAny {
+	display: none;
+	font-style: italic;
+	width: 26px;
+	height: 21px;
+	padding: 0;
 }
