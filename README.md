@@ -1,16 +1,20 @@
 # Fantasy Map Generator
 
-Azgaar's _Fantasy Map Generator_. Online tool generating interactive svg maps based on [D3](https://d3js.org) voronoi diagram.
+Azgaar's _Fantasy Map Generator_. Online tool generating interactive and highly customizable svg maps based on voronoi diagram.
 
-Project is under active development, check out the work in progress version [here](https://azgaar.github.io/Fantasy-Map-Generator). Refer to the [project wiki](https://github.com/Azgaar/Fantasy-Map-Generator/wiki) for a guidance. Some details are covered in my blog [_Fantasy Maps for fun and glory_](https://azgaar.wordpress.com), you may also keep an eye on my [Trello devboard](https://trello.com/b/7x832DG4/fantasy-map-generator).
+Project is under development, check out the beta version [here](https://azgaar.github.io/Fantasy-Map-Generator). You can also try an Electron desktop application - download [an archive](https://github.com/Azgaar/Fantasy-Map-Generator/releases) for your architecture, unzip and run the _Azgaar's Fantasy Map Generator.exe_.
 
-[![alt tag](https://i0.wp.com/azgaar.files.wordpress.com/2017/03/80k-part.png)](https://azgaar.wordpress.com)
+Refer to the [project wiki](https://github.com/Azgaar/Fantasy-Map-Generator/wiki) for a guidance. Some details are covered in my blog [_Fantasy Maps for fun and glory_](https://azgaar.wordpress.com), you may also keep an eye on my [Trello devboard](https://trello.com/b/7x832DG4/fantasy-map-generator).
 
-Join our [Reddit community](https://www.reddit.com/r/FantasyMapGenerator) to share the created maps, discuss the Generator, suggest ideas and get a most recent updates. You may also contact me directly via [email](mailto:maxganiev@yandex.com). For bug reports please use the project [issues page](https://github.com/Azgaar/Fantasy-Map-Generator/issues). If you face performance issues, please try to open the page in a small window and use the default graph size only. In Firefox fast map zooming may cause browser crush.
+[![preview](https://cdn.discordapp.com/attachments/587406457725779968/594840629213659136/preview1.png)](https://i.redd.it/8bf81ir2cy631.png)
+
+[![preview](https://cdn.discordapp.com/attachments/587406457725779968/594840633911279636/preview2.png)](https://cdn.discordapp.com/attachments/515359185664344071/593888810782162964/The_Wichin_Island_sepia.png)
+
+[![preview](https://cdn.discordapp.com/attachments/587406457725779968/594840632296734720/preview3.png)](https://cdn.discordapp.com/attachments/515359096925454350/593891237984206848/The_Wichin_Island_-_diplomacy.png)
+
+Join our [Reddit community](https://www.reddit.com/r/FantasyMapGenerator) and [Discord server](https://discordapp.com/invite/X7E84HU) to share the created maps, discuss the Generator, suggest ideas and get a most recent updates. You may also contact me directly via [email](mailto:maxganiev@yandex.com). For bug reports please use the project [issues page](https://github.com/Azgaar/Fantasy-Map-Generator/issues) or Discord "Bugs" channel. If you are facing performance issues, please read [the tips](https://github.com/Azgaar/Fantasy-Map-Generator/wiki/Tips#performance-tips).
 
 You can support the project [on Patreon](https://www.patreon.com/azgaar).
-
-The desktop application (Electron) is [under development](https://github.com/mamokin/Fantasy-Map-Generator/tree/forked-develop).
 
 _Inspiration:_
 
